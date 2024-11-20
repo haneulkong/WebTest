@@ -3,267 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Roboto, Arial, sans-serif;
-        }
-
-        /* Header Styles */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 56px;
-            background: white;
-            display: flex;
-            align-items: center;
-            padding: 0 16px;
-            justify-content: space-between;
-            border-bottom: 1px solid #e5e5e5;
-            z-index: 100;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-        }
-
-        .menu-icon {
-            padding: 8px;
-            cursor: pointer;
-        }
-
-        .youtube-logo {
-            color: #FF0000;
-            font-size: 20px;
-            font-weight: bold;
-            margin-left: 16px;
-            text-decoration: none;
-        }
-
-        .search-container {
-            display: flex;
-            align-items: center;
-            flex: 0 1 728px;
-            margin: 0 auto;
-        }
-
-        .search-input {
-            width: 100%;
-            height: 40px;
-            padding: 0 16px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 2px 0 0 2px;
-        }
-
-        .search-button {
-            height: 40px;
-            width: 64px;
-            background: #f8f8f8;
-            border: 1px solid #ccc;
-            border-left: none;
-            cursor: pointer;
-        }
-
-        /* Sidebar Styles */
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 56px;
-            bottom: 0;
-            width: 240px;
-            background: white;
-            padding: 12px 0;
-            overflow-y: auto;
-        }
-
-        .sidebar-item {
-            display: flex;
-            align-items: center;
-            padding: 8px 24px;
-            cursor: pointer;
-        }
-
-        .sidebar-item:hover {
-            background: #f2f2f2;
-        }
-
-        .sidebar-text {
-            margin-left: 24px;
-            font-size: 14px;
-        }
-
-        /* Main Content Styles */
-        .main-content {
-            margin-left: 240px;
-            margin-top: 56px;
-            padding: 24px;
-            background: #f9f9f9;
-            min-height: calc(100vh - 56px);
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 16px;
-        }
-
-        .video-card {
-            cursor: pointer;
-        }
-
-        .thumbnail {
-            position: relative;
-            width: 100%;
-            height: 180px;
-            background: #eee;
-            margin-bottom: 12px;
-        }
-
-        .video-duration {
-            position: absolute;
-            bottom: 8px;
-            right: 8px;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 3px 4px;
-            border-radius: 2px;
-            font-size: 12px;
-        }
-
-        .video-info {
-            display: flex;
-            padding: 0 8px;
-        }
-
-        .channel-avatar {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: #ddd;
-            margin-right: 12px;
-        }
-
-        .video-details {
-            flex: 1;
-        }
-
-        .video-title {
-            font-weight: 500;
-            margin-bottom: 4px;
-            font-size: 14px;
-            line-height: 1.4;
-        }
-
-        .channel-name, .video-metadata {
-            color: #606060;
-            font-size: 13px;
-        }
-
-    </style>
+    <title>Digital Transformations</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header class="header">
-        <div class="header-left">
-            <div class="menu-icon">☰</div>
-            <a href="#" class="youtube-logo">YouTube</a>
-        </div>
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="검색">
-            <button class="search-button">🔍</button>
-        </div>
-        <div class="header-right">
-            <!-- 아이콘들을 위한 공간 -->
-        </div>
-    </header>
-
-    <nav class="sidebar">
-        <div class="sidebar-item">
-            <span>🏠</span>
-            <span class="sidebar-text">홈</span>
-        </div>
-        <div class="sidebar-item">
-            <span>🔥</span>
-            <span class="sidebar-text">인기</span>
-        </div>
-        <div class="sidebar-item">
-            <span>📺</span>
-            <span class="sidebar-text">구독</span>
-        </div>
-        <div class="sidebar-item">
-            <span>📚</span>
-            <span class="sidebar-text">보관함</span>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-900 border-b border-gray-800 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+                <img src="/api/placeholder/40/40" alt="Logo" class="h-10">
+                <div class="space-x-6">
+                    <a href="#" class="hover:text-blue-500">집</a>
+                    <a href="#" class="hover:text-blue-500">경험</a>
+                    <a href="#" class="hover:text-blue-500">서비스</a>
+                    <a href="#" class="hover:text-blue-500">역량</a>
+                    <a href="#" class="hover:text-blue-500">팀</a>
+                    <a href="#" class="hover:text-blue-500">블로그</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="p-2 border border-blue-500 rounded">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <button class="px-6 py-2 bg-blue-600 rounded-md hover:bg-blue-700">문의하기</button>
+            </div>
         </div>
     </nav>
 
-    <main class="main-content">
-        <div class="video-grid">
-            <!-- 비디오 카드 1 -->
-            <div class="video-card">
-                <div class="thumbnail">
-                    <div class="video-duration">12:34</div>
-                </div>
-                <div class="video-info">
-                    <div class="channel-avatar"></div>
-                    <div class="video-details">
-                        <div class="video-title">인기 유튜브 동영상 제목입니다</div>
-                        <div class="channel-name">채널 이름</div>
-                        <div class="video-metadata">조회수 100만회 • 3일 전</div>
-                    </div>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <div class="pt-24 pb-16 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4">환영합니다</h1>
+            <h2 class="text-6xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-white">
+                DIGITAL TRANSFORMATIONS
+            </h2>
+            <p class="text-xl mb-8">
+                Agile 소프트웨어 제공, DevSecOps 분야의 전 세계 리더<br>
+                혁신과 디지털 혁신
+            </p>
+            <button class="px-8 py-3 bg-blue-600 rounded-md hover:bg-blue-700 text-lg">
+                전화 예약하기
+            </button>
+        </div>
+    </div>
 
-            <!-- 비디오 카드 2 -->
-            <div class="video-card">
-                <div class="thumbnail">
-                    <div class="video-duration">8:42</div>
+    <!-- Services Grid -->
+    <div class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold mb-12 text-center">우리의 서비스</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 bg-gray-800 rounded-lg">
+                <div class="text-blue-500 mb-4">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+                    </svg>
                 </div>
-                <div class="video-info">
-                    <div class="channel-avatar"></div>
-                    <div class="video-details">
-                        <div class="video-title">두 번째 인기 동영상 제목입니다</div>
-                        <div class="channel-name">다른 채널</div>
-                        <div class="video-metadata">조회수 50만회 • 1주일 전</div>
-                    </div>
-                </div>
+                <h3 class="text-xl font-semibold mb-2">측진 및 실습 코칭</h3>
             </div>
-
-            <!-- 비디오 카드 3 -->
-            <div class="video-card">
-                <div class="thumbnail">
-                    <div class="video-duration">15:20</div>
+            <div class="p-6 bg-gray-800 rounded-lg">
+                <div class="text-blue-500 mb-4">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
                 </div>
-                <div class="video-info">
-                    <div class="channel-avatar"></div>
-                    <div class="video-details">
-                        <div class="video-title">세 번째 추천 동영상 제목입니다</div>
-                        <div class="channel-name">추천 채널</div>
-                        <div class="video-metadata">조회수 30만회 • 2주일 전</div>
-                    </div>
-                </div>
+                <h3 class="text-xl font-semibold mb-2">평가 기반 코칭</h3>
             </div>
-
-            <!-- 비디오 카드 4 -->
-            <div class="video-card">
-                <div class="thumbnail">
-                    <div class="video-duration">5:55</div>
+            <div class="p-6 bg-gray-800 rounded-lg">
+                <div class="text-blue-500 mb-4">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
                 </div>
-                <div class="video-info">
-                    <div class="channel-avatar"></div>
-                    <div class="video-details">
-                        <div class="video-title">네 번째 인기 동영상 제목입니다</div>
-                        <div class="channel-name">인기 채널</div>
-                        <div class="video-metadata">조회수 20만회 • 1개월 전</div>
-                    </div>
+                <h3 class="text-xl font-semibold mb-2">조직 구조 코칭</h3>
+            </div>
+            <div class="p-6 bg-gray-800 rounded-lg">
+                <div class="text-blue-500 mb-4">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
+                    </svg>
                 </div>
+                <h3 class="text-xl font-semibold mb-2">DevSecOps 및 CI/CD 평가</h3>
             </div>
         </div>
-    </main>
+    </div>
+
+    <!-- Clients Section -->
+    <div class="bg-gray-800 py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <img src="/api/placeholder/120/40" alt="Autodesk" class="h-8">
+                <img src="/api/placeholder/120/40" alt="T-Mobile" class="h-8">
+                <img src="/api/placeholder/120/40" alt="Amazon" class="h-8">
+                <img src="/api/placeholder/120/40" alt="Space Force" class="h-8">
+                <img src="/api/placeholder/120/40" alt="US Bank" class="h-8">
+                <img src="/api/placeholder/120/40" alt="Visa" class="h-8">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
